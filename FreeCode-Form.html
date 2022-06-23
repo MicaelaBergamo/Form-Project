@@ -1,0 +1,159 @@
+<style>
+body{
+  position:relative;
+  background:url(https://www.contemporist.com/wp-content/uploads/2019/03/wood-covered-columns-270319-912-02-800x992.jpg)
+}
+#title{
+  text-align:center;
+}
+#description{
+  text-align:center;
+  font-size:19px;
+  font-weight:bold;
+}
+header{
+ background-color:rgba(246, 239, 233,0.6);
+ padding:1px 1px 1px 1px;
+ margin:10px;
+}
+#basic-info{
+  grid-area:mid;
+  background-color:rgba(253, 227, 167,0.8);
+   padding:20px 20px;
+}
+#name{
+  width:100%;
+  height:30px;
+}
+#email{
+  width:100%;
+  height:30px;
+}
+#number{
+  width:100%;
+  height:30px;
+}
+#dropdown{
+  width:100%;
+  height:30px;
+}
+[name="formtitle"]{
+  font-size:20px;
+  font-weight:bold;
+}
+#lackingfood{
+  grid-area:mid2;
+  background-color:rgba(253, 227, 167,0.8);
+   padding:1px 20px;
+   line-height:40px;
+}
+#bestaspect{
+  grid-area:mid3;
+  background-color:rgba(253, 227, 167,0.8);
+   padding:10px 20px;
+   line-height:23px;
+   font-weight:bold;
+}
+#improve{
+  grid-area:mid4;
+  background-color:rgba(253, 227, 167,0.8);
+   padding:10px 20px;
+  line-height:23px;
+  font-weight:bold;
+}
+#comments{
+  grid-area:mid5;
+  background-color:rgba(253, 227, 167,0.8);
+  padding:10px 20px;
+}
+#commentbox{
+  min-width:560px;
+  max-width:560px;
+  min-height:100px;
+  max-height:200px;
+}
+#submit{
+display:block;
+width:100%;
+background-color:rgba(220, 220, 220,0.8);
+font-size:14px;
+padding:4px 4px;
+border-radius:5px;
+border:1px solid;
+transition-duration: 0.4s;
+}
+#submit:hover{
+  background-color:rgba(250, 249, 233,0.8);
+}
+
+#survey-form{
+ display:grid;
+ grid-template-rows:auto auto auto;
+ grid-template-columns:auto 600px auto;
+ grid-template-areas:
+ "1 mid 3"
+ "1 mid2 3"
+ "1 mid3 3"
+ "1 mid4 3"
+ "1 mid5 3";
+}
+    </style>
+
+<!DOCTYPE>
+<html>
+  <head>
+    <title>
+      Survey Form
+      </title>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <header>
+        <h1 id="title">
+Restaurant Survey Form
+        </h1>
+        <p id="description">
+          Participating in this survey helps us to give you the best service possible, thank you for doing so!
+          </p>
+</header>
+
+<form id="survey-form">
+  <div id="basic-info">
+<label for="name" id="name-label" name="formtitle">Name</label><br>
+<input id="name" type="text" placeholder="Enter your name" required><br><br>
+<label for="email" id="email-label" name="formtitle">Email</label><br>
+<input id="email" type="email" placeholder="Enter your Email" required><br><br>
+<label for="number" id="number-label" name="formtitle">How many stars do you give to our service?</label> <br><input id="number" type="number" placeholder="1-5" min="1" max="5"></div>
+<div id="lackingfood"><label for="dropdown" name="formtitle">What kind of food do you think is lacking on our menu?</label><br>
+<select id="dropdown">
+<option disabled selected value>Choose an option</option>
+<option>Mexican food</option>
+<option>Italian food</option>
+<option>Japanese food</option>
+<option>Indian food</option>
+<option>Thai food</option>
+<option>None</option>
+  </select><br>
+  </div>
+  <div id="bestaspect"><p name="formtitle">In your opinion, what is the best aspect of our service?</p>
+<label><input id="hygiene-best" name="best-aspect" type="radio" value="hygiene and cleanliness">Hygiene and cleanliness</label><br>
+<label><input id="manners-best" name="best-aspect" type="radio" value="employees manners">Employees manners</label><br>
+<label><input id="food-quality-best" name="best-aspect" type="radio" value="food quality">Food quality</label><br>
+<label><input id="prices-best" name="best-aspect" type="radio" value="prices">Prices</label><br>
+<label><input id="environment-best" name="best-aspect" type="radio" value="environment/atmosphere">Environment/Atmosphere</label>
+</div>
+<div id="improve">
+  <p name="formtitle">What aspects of our service should we improve?<br>(Try not to choose more than 3)</p>
+  <label><input id="improve-hygiene" type="checkbox" value="hygiene and cleanliness">Hygiene and cleanliness</label><br>
+  <label><input id="improve-manners" type="checkbox" value="employees manners">Employees manners</label><br>
+<label><input id="improve-food-quality" type="checkbox" value="food quality">Food quality</label><br>
+<label><input id="improve-prices" type="checkbox" value="prices">Prices</label><br>
+<label><input id="improve-environment" type="checkbox" value="environment/atmosphere">Environment/Atmosphere</label>
+  </div>
+  <div id="comments"> <p name="formtitle">Leave us any other comment you would like to make here:</p>
+  <textarea id="commentbox" rows="10" cols="75"></textarea><br><br>
+  <button id="submit" type="submit">Submit</button>
+  </div>
+  </form>
+</body>
+  </html>
